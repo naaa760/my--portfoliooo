@@ -62,17 +62,19 @@ export default function Home() {
         );
 
         // Add a more reliable transition
-        scrollContainer.style.transition =
+        (scrollContainer as HTMLElement).style.transition =
           "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)";
 
         // Create a subtle vertical movement based on scrollY
         const buttons = document.querySelectorAll(".scroll-button");
         buttons.forEach((button, index) => {
           const translateY = Math.sin((scrollY + index * 100) / 200) * 5;
-          button.style.transform = `translateY(${translateY}px) scale(${
+          (
+            button as HTMLElement
+          ).style.transform = `translateY(${translateY}px) scale(${
             scrollY > 100 ? 1 : 0.98 + scrollY / 5000
           })`;
-          button.style.transition = "transform 0.3s ease-out";
+          (button as HTMLElement).style.transition = "transform 0.3s ease-out";
         });
       }
     };
