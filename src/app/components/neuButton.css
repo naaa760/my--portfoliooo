@@ -1,0 +1,63 @@
+/* From Uiverse.io by adamgiebl */
+.neu-button {
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+  color: #4d4d4d;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 30px;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid rgb(206, 206, 206);
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.neu-button:hover {
+  box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff,
+    2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}
+
+.neu-button:focus {
+  outline: none;
+  box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff,
+    2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}
+
+.neu-button-name {
+  padding: 8px 20px;
+  font-size: 14px;
+}
+
+.neu-button-title {
+  background-color: #333;
+  color: white;
+  box-shadow: inset 4px 4px 10px #222, inset -4px -4px 10px #444;
+  border: 2px solid #444;
+  padding: 8px 20px;
+  font-size: 14px;
+}
+
+.neu-button-title:hover {
+  box-shadow: inset 2px 2px 5px #222, inset -2px -2px 5px #444, 2px 2px 5px #222,
+    -2px -2px 5px #444;
+}
+
+/* Add this new style for the navigation buttons */
+.neu-button-nav {
+  padding: 6px 16px;
+  font-size: 12px;
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  box-shadow: inset 4px 4px 8px #bcbcbc, inset -4px -4px 8px #ffffff;
+  color: #4d4d4d;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid rgb(206, 206, 206);
+  margin: 0 2px;
+}
+
+.neu-button-nav:hover {
+  box-shadow: inset 2px 2px 4px #bcbcbc, inset -2px -2px 4px #ffffff,
+    2px 2px 4px #bcbcbc, -2px -2px 4px #ffffff;
+  color: #2d9d5a;
+}

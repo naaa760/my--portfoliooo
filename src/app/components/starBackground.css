@@ -1,0 +1,28 @@
+.star-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
+  background: linear-gradient(to bottom, #0f172a, #1e293b);
+}
+
+/* Add a subtle glow effect for stars */
+@keyframes glow {
+  0% {
+    filter: blur(2px) brightness(1);
+  }
+  50% {
+    filter: blur(3px) brightness(1.2);
+  }
+  100% {
+    filter: blur(2px) brightness(1);
+  }
+}
+
+.star-background {
+  animation: glow 8s ease-in-out infinite;
+}

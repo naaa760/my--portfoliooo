@@ -1,0 +1,35 @@
+{
+  "pages": {
+    "/layout": [
+      "static/chunks/runtime.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ],
+    "/page": [
+      "static/chunks/runtime.js",
+      "static/chunks/main-app.js",
+      "static/chunks/vendors-_app-pages-browser_node_modules_next_dist_api_image_js-_app-pages-browser_node_module-d0ff25.js",
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
+    ],
+    "/projects/page": [
+      "static/chunks/runtime.js",
+      "static/chunks/main-app.js",
+      "static/chunks/vendors-_app-pages-browser_node_modules_next_dist_api_image_js-_app-pages-browser_node_module-d0ff25.js",
+      "static/chunks/app/projects/page.js"
+    ],
+    "/experience/page": [
+      "static/chunks/runtime.js",
+      "static/chunks/main-app.js",
+      "static/chunks/vendors-_app-pages-browser_node_modules_next_dist_api_image_js-_app-pages-browser_node_module-d0ff25.js",
+      "static/chunks/vendors-_app-pages-browser_node_modules_framer-motion_dist_es_render_components_motion_proxy_mjs.js",
+      "static/chunks/app/experience/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/runtime.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
+    ]
+  }
+}

@@ -1,0 +1,225 @@
+/* Scroll-based transitions */
+.section {
+  min-height: 100vh;
+  transition: all 0.8s ease-in-out;
+  position: relative;
+}
+
+.section-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.section-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: transform 0.5s ease-out;
+}
+
+.sticky-section {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scroll-indicator {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100;
+}
+
+.scroll-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.scroll-dot.active {
+  background-color: #84cc16;
+  transform: scale(1.3);
+}
+
+/* Image transitions */
+.image-sequence {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.sequence-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.sequence-image.visible {
+  opacity: 1;
+}
+
+/* Fade transitions between sections */
+.fade-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 3D transform effects */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Image container hover effects */
+.project-image-container {
+  transition: transform 0.5s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.project-image-container:hover {
+  transform: scale(1.02) translateY(-5px);
+}
+
+/* Scroll-triggered animations */
+@keyframes rotateIn {
+  0% {
+    transform: scale(1) rotateX(0deg);
+  }
+  50% {
+    transform: scale(0.95) rotateX(9deg);
+  }
+  100% {
+    transform: scale(1) rotateX(0deg);
+  }
+}
+
+.rotate-on-scroll {
+  animation: rotateIn 1.5s ease-in-out;
+}
+
+/* Star field effect */
+.star-field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle ease-in-out infinite;
+}
+
+.shooting-star {
+  position: absolute;
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1)
+  );
+  animation: shoot linear infinite;
+  opacity: 0;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes shoot {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(300px) translateY(300px);
+    opacity: 0;
+  }
+}
+
+/* Content area star field */
+.star-field-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.star-content {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle-content ease-in-out infinite;
+  box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.9);
+  width: 2px !important;
+  height: 2px !important;
+}
+
+@keyframes twinkle-content {
+  0% {
+    opacity: 0.4;
+    transform: scale(0.8);
+    box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.9);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(0.8);
+    box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.4);
+  }
+}
